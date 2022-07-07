@@ -40,15 +40,6 @@ class Queue:
       temp = temp.next
     return ' -> '.join(vals)
 
-q = Queue()
-q.enqueue(5)
-q.enqueue(4)
-q.enqueue(1)
-print(q)
-q.dequeue()
-print(q)
-
-
 k = 3
 running_total = 0
 q = Queue()
