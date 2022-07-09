@@ -12,7 +12,7 @@ class Stack:
     return self._stack.pop()
   
   def peek(self): # create checking the last item but do not remove that item
-    return self._stack.x[len(self._stack)-1]
+    return self._stack[len(self._stack)-1]
   
   def size(self): # create the length function of the stack
     return len(self._stack)
