@@ -6,7 +6,7 @@ class Stack:
     self._stack = []
     
   def push(self, x): # create adding function
-    self._stack.append(x)
+    return self._stack.append(x)
     
   def pop(self): # create remove function
     return self._stack.pop()
