@@ -9,11 +9,11 @@ class ListNode:
     return f'{self.val} -> {self.next.__repr__()}'
 #start coding here    
 def solution(head: ListNode):
-  # set value need to add to the list
+  # create a new node with val
   n = ListNode(5)
-  # pointing the next node to connect the head
+  # pointing to the head
   n.next = head
-  # refer new node to be head
+  # update the new node as head
   head = n
   return head
 #test case
