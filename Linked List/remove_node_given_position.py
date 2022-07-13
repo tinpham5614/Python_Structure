@@ -10,24 +10,19 @@ class ListNode:
 
 #start coding here
 def solution(head, position: int):
-  #create previous node
-  prev = None
-  # assign current node becomes head
+  if head is None: #if empty list, do nothing
+    return None
+  counter = 0 #create counter
+  #create 2 pointers
+  prev = head 
   curr = head
-  #create counter
-  counter = 0
-  if position == 0:
-    head = head.next
-    return head
-  #loop through the llist
-  while curr:
-    #if the position equal to counter (target position)
-    if counter == position:
-      prev.next = curr.next #point to the next node
-    else: #otherwise
-      prev = curr #stay the same position
-    counter += 1 #increase to reach the target position
-    curr = curr.next #runs the loop
+  while curr: #while loop
+    curr = curr.next #move to next node if curr != null
+    counter +=1 #counter increase by 1
+    if (counter == position): #if counter is the same with position
+        prev.next = curr.next #skip a node, point the pointer to the node after
+    else:
+        prev = curr # otherwise, prev remain as the same curr
   return head
       
 #test case
