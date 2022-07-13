@@ -16,7 +16,7 @@ def solution(head: ListNode):
   #otherwise, find the last node and add the new node
     #traversal through the list
   curr = head #assign curr node is head
-  while curr.next: # if curr -> next not null
+  while curr.next: # if the next node is not null, continue traversing
     curr = curr.next # travesal
   curr.next = new_node #the last node before null is new node
   return head
