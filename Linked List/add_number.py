@@ -10,8 +10,8 @@ class ListNode:
 def add(l1,l2):
   #go through l1, l2
   carry = 0
-  new_head = ListNode(0)
-  new_curr = new_head
+  dummy = ListNode(0)
+  curr = dummy
   while l1 is not None or l2 is not None:
     l1_val = 0
     if l1 is not None:
@@ -26,13 +26,13 @@ def add(l1,l2):
     else:
       carry = 0
       new_col = ListNode(new_val)
-      new_curr.next = new_col
-      new_curr = new_col
+      curr.next = new_col
+      curr = new_col
     if l1:
       l1 = l1.next
     if l2:
       l2 = l2.next
-  return new_head.next
+  return dummy.next
 
 l1 = ListNode(1)
 temp = l1
