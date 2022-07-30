@@ -10,7 +10,7 @@ class ListNode:
 def add(l1,l2):
   #go through l1, l2
   carry = 0
-  new_head = ListNode(-1)
+  new_head = ListNode(0)
   new_curr = new_head
   while l1 is not None or l2 is not None:
     l1_val = 0
@@ -25,23 +25,23 @@ def add(l1,l2):
       new_val -= 10
     else:
       carry = 0
-    new_col = ListNode(new_val)
-    new_curr.next = new_col
-    new_curr = new_col
+      new_col = ListNode(new_val)
+      new_curr.next = new_col
+      new_curr = new_col
     if l1:
       l1 = l1.next
     if l2:
       l2 = l2.next
   return new_head.next
 
-head = ListNode(9)
-temp = head
-for value in [9]:
+l1 = ListNode(1)
+temp = l1
+for value in [2]:
   temp.next = ListNode(value)
   temp = temp.next
-head2 = ListNode(5)
-temp = head2
-for value in [6,4,1,1,2]:
+l2 = ListNode(3)
+temp = l2
+for value in [4]:
   temp.next = ListNode(value)
   temp = temp.next
-print(add(head,head2))
+print(add(l1,l2))
